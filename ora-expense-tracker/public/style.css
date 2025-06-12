@@ -1,0 +1,11 @@
+/* This file can be used for global styles, though src/index.css is often preferred in CRA setups. */
+/* For now, ensuring body background from src/index.css takes precedence or is consistent. */
+
+/* You could add global resets or font imports here if not handled elsewhere. */
+/* Example:
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+*/

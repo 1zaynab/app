@@ -1,0 +1,230 @@
+/* General App Styling */
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: var(--background-color, #EEE2DF); /* Default from palette */
+  color: var(--text-color, #2F80E4); /* Default from palette */
+}
+
+/* Header Styling (Matches original intent) */
+.app-header {
+  background-color: var(--background-color, #EEE2DF);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px var(--shadow-dark, #c1b8b5),
+              -8px -8px 16px var(--shadow-light, #ffffff);
+  margin-bottom: 40px;
+}
+
+.app-header h1 {
+  color: var(--highlight-tertiary-color, #5B61B2);
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* Form Styling */
+.expense-form {
+  background-color: var(--background-color, #EEE2DF);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 16px var(--shadow-dark, #c1b8b5),
+              -8px -8px 16px var(--shadow-light, #ffffff);
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.expense-form h2 {
+  color: var(--secondary-accent-color, #2F80E4);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Form Error Message */
+.form-error-message {
+  color: #FA383E; /* Red for errors */
+  background-color: rgba(250, 56, 62, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(250, 56, 62, 0.3);
+  font-weight: bold;
+}
+
+/* Neumorphic Input Styling (from original subtask) */
+.neumorphic-input {
+  background-color: var(--background-color, #EEE2DF);
+  border: none;
+  padding: 15px 20px;
+  border-radius: 15px;
+  font-size: 1em;
+  color: var(--text-color, #2F80E4);
+  box-shadow: inset 4px 4px 8px var(--shadow-dark, #c1b8b5),
+              inset -4px -4px 8px var(--shadow-light, #ffffff);
+  transition: all 0.2s ease-in-out;
+}
+
+.neumorphic-input::placeholder {
+  color: var(--subtle-detail-color, #DEC1D8);
+}
+
+.neumorphic-input:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 4px var(--shadow-dark, #c1b8b5),
+              inset -2px -2px 4px var(--shadow-light, #ffffff),
+              0 0 0 2px var(--primary-accent-color, #6DA0E1);
+}
+
+/* Neumorphic Button Styling (from original subtask) */
+.neumorphic-button {
+  background-color: var(--background-color, #EEE2DF);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  color: var(--secondary-accent-color, #2F80E4);
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 8px 8px 16px var(--shadow-dark, #c1b8b5),
+              -8px -8px 16px var(--shadow-light, #ffffff);
+  transition: all 0.2s ease-in-out;
+}
+
+.neumorphic-button:hover {
+  box-shadow: 6px 6px 12px var(--shadow-dark, #c1b8b5),
+              -6px -6px 12px var(--shadow-light, #ffffff);
+  color: var(--primary-accent-color, #6DA0E1);
+  transform: translateY(-1px);
+}
+
+.neumorphic-button:active {
+  box-shadow: inset 4px 4px 8px var(--shadow-dark, #c1b8b5),
+              inset -4px -4px 8px var(--shadow-light, #ffffff);
+  font-size: 0.98em;
+  transform: translateY(0px);
+  color: var(--primary-accent-color, #6DA0E1);
+}
+
+/* Expense List Styling (from original subtask) */
+.expense-list-container {
+  background-color: var(--background-color, #EEE2DF);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 16px var(--shadow-dark, #c1b8b5),
+              -8px -8px 16px var(--shadow-light, #ffffff);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.expense-list-container h2 {
+  color: var(--highlight-tertiary-color, #5B61B2);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.expense-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expense-list li {
+  background-color: var(--background-color, #EEE2DF);
+  padding: 15px 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 6px 6px 12px var(--shadow-dark, #c1b8b5),
+              -6px -6px 12px var(--shadow-light, #ffffff);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color, #2F80E4);
+  transition: all 0.2s ease-in-out;
+}
+
+.expense-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 8px 8px 16px var(--shadow-dark, #c1b8b5),
+              -8px -8px 16px var(--shadow-light, #ffffff);
+}
+
+.expense-list li:last-child {
+  margin-bottom: 0;
+}
+
+.expense-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  text-align: left; /* Ensure details text aligns left */
+}
+
+.expense-description {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.expense-category {
+  font-size: 0.9em;
+  color: var(--primary-accent-color, #6DA0E1); /* Lighter blue for category */
+}
+
+.expense-date {
+  font-size: 0.8em;
+  color: var(--subtle-detail-color, #DEC1D8);
+}
+
+.expense-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.expense-amount {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: var(--secondary-accent-color, #2F80E4);
+}
+
+.delete-button {
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 0.9em;
+  font-weight: normal;
+  color: var(--highlight-tertiary-color, #5B61B2);
+  box-shadow: 4px 4px 8px var(--shadow-dark, #c1b8b5),
+              -4px -4px 8px var(--shadow-light, #ffffff);
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+  color: #FA383E; /* Red for delete action */
+  box-shadow: 3px 3px 6px var(--shadow-dark, #c1b8b5),
+              -3px -3px 6px var(--shadow-light, #ffffff);
+  transform: translateY(-1px);
+}
+
+.delete-button:active {
+  box-shadow: inset 2px 2px 4px var(--shadow-dark, #c1b8b5),
+              inset -2px -2px 4px var(--shadow-light, #ffffff);
+  font-size: 0.88em;
+  transform: translateY(0px);
+  color: #FA383E;
+}
+
+.expense-list-container p { /* For "No expenses yet" message */
+  color: var(--secondary-accent-color, #2F80E4);
+  font-style: italic;
+  padding: 20px;
+}
+
+/* Ensure CSS variables defined in :root in public/style.css or src/index.css are available */
+/* If not, define them here or ensure those files are correctly set up and imported. */
+/* For this pass, I'm using fallbacks in var() if they are not defined. */

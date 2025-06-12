@@ -1,0 +1,41 @@
+:root {
+  --background-color: #EEE2DF;
+  --primary-accent-color: #6DA0E1;
+  --secondary-accent-color: #2F80E4;
+  --highlight-tertiary-color: #5B61B2;
+  --subtle-detail-color: #DEC1D8;
+
+  --text-color: #2F80E4; /* Default text color, can be overridden */
+  --shadow-dark: #c1b8b5;
+  --shadow-light: #ffffff;
+
+  --positive-color: #42B72A;
+  --negative-color: #FA383E; /* Used for errors */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color); /* Default body text color */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global Neumorphic Base (Optional - can be applied per component or via classes) */
+/* For instance, a global raised look for cards if desired */
+/*
+.neumorphic-raised-global {
+  background-color: var(--background-color);
+  border-radius: 20px;
+  box-shadow: 8px 8px 16px var(--shadow-dark),
+              -8px -8px 16px var(--shadow-light);
+}
+*/
